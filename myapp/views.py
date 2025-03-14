@@ -15,7 +15,7 @@ class Curd:
         self.filename = filename 
         self.tasks = []
         self.history = []
-        self.load_curd()
+        # self.load_curd()
 
     def save_curd(self):
         with open(self.filename, "w") as f :
@@ -44,6 +44,7 @@ class Curd:
         self.save_curd()
 
     def list_curd1(self):
+        self.load_curd()
         if not self.tasks:
             print("Not tasks found")
         else:
